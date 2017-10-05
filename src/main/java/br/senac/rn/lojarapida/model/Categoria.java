@@ -14,14 +14,16 @@ public class Categoria {
     private int id;
     private String nome;
     private String descricao;
+    private String sexo;
 
     public Categoria() {
     }
 
-    public Categoria(int id, String nome, String descricao) {
+    public Categoria(int id, String nome, String descricao, String sexo) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
+        this.sexo = sexo;
     }
 
     public String getDescricao() {
@@ -42,6 +44,14 @@ public class Categoria {
 
     public String getNome() {
         return nome;
+    }
+    
+     public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 
     public void setNome(String nome) {
@@ -75,6 +85,8 @@ public class Categoria {
 
     @Override
     public String toString() {
-        return "Categoria{" + "id=" + id + ", nome=" + nome + ", descricao=" + descricao + '}';
+        return "Categoria{" + "id=" + id + ", nome=" + nome + ", descricao=" + descricao + ", sexo=" + sexo + '}';
     }
+
+   
 }

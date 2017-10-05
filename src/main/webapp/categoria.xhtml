@@ -16,8 +16,12 @@
                     <h:outputLabel value="Nome" for="nome"/>
                     <h:inputText id="nome" value="#{categoriaBean.categoria.nome}"/>
                     <br></br>
-                    <h:outputLabel value="Descrição" for="descrição"/>
-                    <h:inputTextarea id="descrição" value="#{categoriaBean.categoria.descricao}"/>
+                    <h:outputLabel value="Descrição" for="descricao"/>
+                    <h:inputTextarea id="descricao" value="#{categoriaBean.categoria.descricao}"/>
+                    <br></br>
+                    <h:outputLabel value="Sexo" for="sexo"/>
+                    <h:inputText id="sexo" value="#{categoriaBean.categoria.sexo}"/>
+                    <br></br>
                     <h:commandButton value="Salvar" action="#{categoriaBean.salvar}"/>
                 </h:panelGrid>
 
@@ -36,6 +40,10 @@
                         <h:outputText value="#{categoria.nome}" />
                     </h:column>
                     <h:column>
+                        <f:facet name="header">Sexo</f:facet>
+                        <h:outputText value="#{categoria.sexo}" />
+                    </h:column>
+                    <h:column>
                         <h:commandLink value="editar" action="#{categoriaBean.editar(categoria)}" />
                     </h:column>
                     <h:column>
@@ -44,11 +52,11 @@
                     </h:dataTable>
             </h:form>
         </fieldset>
-        
+                
         <br>
 
         </br>
-        Pagina carregada com Êxito!
+        Pagina carregada com êxito!
     </h:body>
 </html>
 
