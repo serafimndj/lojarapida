@@ -112,8 +112,13 @@ public class Venda implements Serializable {
         return "Venda{" + "id=" + id + ", cliente=" + cliente + ", produtos=" + produtos + ", valor=" + valor + '}';
     }
 
+    public void adicionarProduto(Produto produto) {
+        this.produtos.add(produto);
+    }
     
-    
+    public void removerProduto(Produto produto) {
+         this.produtos.remove(produto);
+    }
        
 }
 

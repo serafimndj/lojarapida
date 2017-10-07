@@ -7,8 +7,8 @@ public class PrincipalCategoria {
 
     public static void main(String[] args) {
 
-        new CategoriaDAO().insert(new Categoria(0, "chuteira", "Calcados"));  
-        System.exit(0);
+//        new CategoriaDAO().insert(new Categoria(0, "chuteira", "Calcados"));  
+//        System.exit(0);
     }
     
         

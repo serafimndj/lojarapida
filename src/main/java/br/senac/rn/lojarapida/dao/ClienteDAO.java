@@ -3,6 +3,7 @@ package br.senac.rn.lojarapida.dao;
 
 import br.senac.rn.lojarapida.model.Cliente;
 import br.senac.rn.lojarapida.util.GenericDAO;
+import java.util.List;
 import javax.persistence.TypedQuery;
 
 
@@ -13,11 +14,11 @@ public class ClienteDAO extends GenericDAO<Cliente> {
     public Class<Cliente> getClassType() {
         return Cliente.class;
     }   
-    public Cliente buscarPorCpf(String cpf) {
-        String jpql = "SELECT c FROM Cliente c WHERE c.cpf = :cpfCliente";
-        TypedQuery<Cliente> consulta = manager.createQuery(jpql, Cliente.class);
-        consulta.setParameter("cpfCliente", cpf);
-        return consulta.getSingleResult(); //getsinglesresult - trará apenas um resultado 
+    public List<Cliente> buscarPorCpf(String cpf) {
+        String jpql = "SELECT c FROM Cliente c WHERE c.cpf like :cpfCliente";
+        TypedQuery<Cliente> consulta = getEm().createQuery(jpql, Cliente.class).setMaxResults(3);
+        consulta.setParameter("cpfCliente", "%" +cpf+ "%");
+        return consulta.getResultList();  //getsinglesresult - trará apenas um resultado 
     }
     }
        

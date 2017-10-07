@@ -31,13 +31,13 @@ public class PrincipalProduto {
 //    
         ProdutoDAO dao = new ProdutoDAO();
 ////        
-       dao.inserir(p1);
-       dao.inserir(p2);
-       dao.inserir(p3);
-       dao.inserir(p4);
-       
-//       dao.excluir(dao.buscarPorId(7)); //exclui no banco atraves do id
-//       dao.excluir(dao.buscarPorId(8));
+//       dao.inserir(p1);
+//       dao.inserir(p2);
+//       dao.inserir(p3);
+//       dao.inserir(p4);
+//       
+////       dao.excluir(dao.buscarPorId(7)); //exclui no banco atraves do id
+////       dao.excluir(dao.buscarPorId(8));
        
        System.exit(0);
     }
